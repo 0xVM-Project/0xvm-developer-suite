@@ -1,7 +1,7 @@
 // tslint:disable-next-line no-implicit-dependencies
 import { assert } from "chai";
 import path from "path";
-import Log from "cyf_developer_sdk_test/dist/Log";
+import Log from "xmv-sdk/dist/Log";
 
 Log.enable();
 Log.debug("Hello, world!");

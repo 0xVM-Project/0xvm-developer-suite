@@ -1327,11 +1327,6 @@ create-hmac@^1.1.4, create-hmac@^1.1.7:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-cyf_developer_sdk_test@^1.0.1:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/cyf_developer_sdk_test/-/cyf_developer_sdk_test-1.0.5.tgz#d479adca12c4c6df64843d3ce053e7dbcd707f26"
-  integrity sha512-S30noeMBThN8b7l2KUGf31t7I7mg+X8z0s35YQb0FqdAeETbB6e4kebAgejn9FlU0abnURK5XAH5AWRuQmbjBA==
-
 debug@3.2.6:
   version "3.2.6"
   resolved "https://registry.npmjs.org/debug/-/debug-3.2.6.tgz"
@@ -3194,6 +3189,11 @@ ws@^7.4.6:
   version "7.5.4"
   resolved "https://registry.npmjs.org/ws/-/ws-7.5.4.tgz"
   integrity sha512-zP9z6GXm6zC27YtspwH99T3qTG7bBFv2VIkeHstMLrLlDJuzA7tQ5ls3OJ1hOGGCzTQPniNJoHXIAOS0Jljohg==
+
+xmv-sdk@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/xmv-sdk/-/xmv-sdk-0.0.1.tgz#5cc3c164dbc291890754c61a27ea28b5f1a7c86c"
+  integrity sha512-/vPwxvPVjpvVhh8JEhgApMGlmlz0s5+qZfqkxYtnE2LcM39cc39+seaotXVRUy9fn3YTVz5fjJuDxwkUct8EfQ==
 
 y18n@^4.0.0:
   version "4.0.1"

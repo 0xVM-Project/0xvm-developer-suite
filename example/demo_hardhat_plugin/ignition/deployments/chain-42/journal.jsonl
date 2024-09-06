@@ -14,3 +14,6 @@
 {"futureId":"LockModule#Lock","networkInteractionId":1,"type":"ONCHAIN_INTERACTION_DROPPED"}
 {"futureId":"LockModule#Lock","networkInteractionId":1,"type":"ONCHAIN_INTERACTION_DROPPED"}
 {"futureId":"LockModule#Lock","networkInteractionId":1,"nonce":1,"transaction":{"fees":{"maxFeePerGas":{"_kind":"bigint","value":"1464100018"},"maxPriorityFeePerGas":{"_kind":"bigint","value":"1464100000"}},"hash":"0x823fd190d703b051c1db95edf7a0e813cd0b7ff6d1e7b379f5ec62c6500111fc"},"type":"TRANSACTION_SEND"}
+{"futureId":"LockModule#Lock","networkInteractionId":1,"type":"ONCHAIN_INTERACTION_DROPPED"}
+{"futureId":"LockModule#Lock","networkInteractionId":1,"type":"ONCHAIN_INTERACTION_DROPPED"}
+{"futureId":"LockModule#Lock","networkInteractionId":1,"nonce":1,"transaction":{"fees":{"maxFeePerGas":{"_kind":"bigint","value":"1610510019"},"maxPriorityFeePerGas":{"_kind":"bigint","value":"1610510000"}},"hash":"0x98436317500228cf2b72974e2c0b559bd8b15bd7b88167eb82712ce2425cbc50"},"type":"TRANSACTION_SEND"}

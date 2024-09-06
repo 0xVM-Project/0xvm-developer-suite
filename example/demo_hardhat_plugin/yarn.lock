@@ -1881,21 +1881,6 @@ create-require@^1.1.0:
   resolved "https://registry.yarnpkg.com/crypt/-/crypt-0.0.2.tgz#88d7ff7ec0dfb86f713dc87bbb42d044d3e6c41b"
   integrity sha512-mCxBlsHFYh9C+HVpiEacem8FEBnMXgU9gy4zmNC+SXAZNB/1idgp/aulFJ4FgCi7GPEVbfyng092GqL2k2rmow==
 
-cyf-hardhat-provider-plugin-test@^0.0.9:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/cyf-hardhat-provider-plugin-test/-/cyf-hardhat-provider-plugin-test-0.0.9.tgz#236f6c0e37447f80f4390e4f9d7aebfcfeaa5ddf"
-  integrity sha512-AjlT2A3O7t4zEb+7jo46j4g2qkBSa47mN03J1PVfwmLd04Hxw0lwI/qtl/KKO1d8295mwu+lSD1PHEAR6gdz9w==
-  dependencies:
-    "@unisat/wallet-sdk" "^1.7.1"
-    cyf_developer_sdk_test "^1.0.1"
-    ethers "^6.13.2"
-    viem "^2.21.0"
-
-cyf_developer_sdk_test@^1.0.1:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/cyf_developer_sdk_test/-/cyf_developer_sdk_test-1.0.4.tgz#28b1cd2add29c2ef43b8024c3958dd659edcc0da"
-  integrity sha512-r9sJ0QlIZmz+ZcDmSfjfW0AYPfRGGvMcPrwIrHiwUrMEKBVFlmTQJtJo136zs1sUnwQ6IRgnVnn8O636eRVwaA==
-
 death@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/death/-/death-1.1.0.tgz#01aa9c401edd92750514470b8266390c66c67318"
@@ -4411,6 +4396,21 @@ ws@^7.4.6:
   version "7.5.10"
   resolved "https://registry.yarnpkg.com/ws/-/ws-7.5.10.tgz#58b5c20dc281633f6c19113f39b349bd8bd558d9"
   integrity sha512-+dbF1tHwZpXcbOJdVOkzLDxZP1ailvSxM6ZweXTegylPny803bFhA+vqBYw4s31NSAk4S2Qz+AKXK9a4wkdjcQ==
+
+xmv-sdk@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/xmv-sdk/-/xmv-sdk-0.0.1.tgz#5cc3c164dbc291890754c61a27ea28b5f1a7c86c"
+  integrity sha512-/vPwxvPVjpvVhh8JEhgApMGlmlz0s5+qZfqkxYtnE2LcM39cc39+seaotXVRUy9fn3YTVz5fjJuDxwkUct8EfQ==
+
+xvm-hardhat-provider-plugin@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/xvm-hardhat-provider-plugin/-/xvm-hardhat-provider-plugin-0.0.1.tgz#8997e4bd65e8bbdbbae57c6ae6429e1bf7c19967"
+  integrity sha512-PXJEE+FwOr9FTO88jMXs97p+dvNDZPFbc1ytTxEPWRCRwOFmACZ880QXenDy8MCVS/96NiW+YiSd+kuq/jufIQ==
+  dependencies:
+    "@unisat/wallet-sdk" "^1.7.1"
+    ethers "^6.13.2"
+    viem "^2.21.0"
+    xmv-sdk "0.0.1"
 
 y18n@^5.0.5:
   version "5.0.8"

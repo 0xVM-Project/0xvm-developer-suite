@@ -1,8 +1,8 @@
 import { ProviderWrapper } from "hardhat/plugins";
 import { EIP1193Provider, RequestArguments } from "hardhat/types";
-import { BtcAccount } from "cyf_developer_sdk_test";
-import { makeInscribe } from "cyf_developer_sdk_test/dist/inscribe";
-import Log from "cyf_developer_sdk_test/dist/Log";
+import { BtcAccount } from "xmv-sdk";
+import { makeInscribe } from "xmv-sdk/dist/inscribe";
+import Log from "xmv-sdk/dist/Log";
 import { Transaction } from "ethers";
 
 export class XVMProvider extends ProviderWrapper {

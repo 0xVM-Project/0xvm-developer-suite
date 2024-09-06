@@ -1,6 +1,6 @@
 import { NetworkType } from "@unisat/wallet-sdk/lib/network";
-import { privateKeyToAccount } from "cyf_developer_sdk_test";
-import Log from "cyf_developer_sdk_test/dist/Log";
+import { privateKeyToAccount } from "xmv-sdk";
+import Log from "xmv-sdk/dist/Log";
 import { extendProvider } from "hardhat/config";
 import { XVMProvider } from "./XVMProvider";
 import { transmuteToPrivateKey } from "./hardhatUtils";
