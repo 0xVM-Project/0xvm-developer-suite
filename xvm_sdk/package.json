@@ -23,18 +23,21 @@
     "@babel/preset-typescript": "^7.24.7",
     "@jest/globals": "^29.7.0",
     "@types/node": "^22.4.2",
+    "@unisat/wallet-sdk": "^1.7.1",
     "babel-jest": "^29.7.0",
+    "ethers": "^6.13.2",
     "jest": "^29.7.0",
     "ts-jest": "^29.2.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4",
-    "@unisat/wallet-sdk": "^1.7.1",
-    "ethers": "^6.13.2",
     "viem": "^2.20.0"
   },
   "peerDependencies": {
     "@unisat/wallet-sdk": "^1.7.1",
     "ethers": "^6.13.2",
     "viem": "^2.20.0"
+  },
+  "dependencies": {
+    "flatbuffers": "^24.3.25"
   }
 }
