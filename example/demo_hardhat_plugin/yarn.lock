@@ -2323,6 +2323,11 @@ flat@^5.0.2:
   resolved "https://registry.yarnpkg.com/flat/-/flat-5.0.2.tgz#8ca6fe332069ffa9d324c327198c598259ceb241"
   integrity sha512-b6suED+5/3rTpUBdG1gupIl8MPFCAMA0QXwmljLhvCUKcUvdE4gWky9zpuGCcXHOsz4J9wPGNWq6OKpmIzz3hQ==
 
+flatbuffers@^24.3.25:
+  version "24.3.25"
+  resolved "https://registry.yarnpkg.com/flatbuffers/-/flatbuffers-24.3.25.tgz#e2f92259ba8aa53acd0af7844afb7c7eb95e7089"
+  integrity sha512-3HDgPbgiwWMI9zVB7VYBHaMrbOO7Gm0v+yD2FV/sCKj+9NDeVL7BOBYUuhWAQGKWOzBo8S9WdMvV0eixO233XQ==
+
 follow-redirects@^1.12.1, follow-redirects@^1.15.6:
   version "1.15.6"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.6.tgz#7f815c0cda4249c74ff09e95ef97c23b5fd0399b"
@@ -4397,20 +4402,22 @@ ws@^7.4.6:
   resolved "https://registry.yarnpkg.com/ws/-/ws-7.5.10.tgz#58b5c20dc281633f6c19113f39b349bd8bd558d9"
   integrity sha512-+dbF1tHwZpXcbOJdVOkzLDxZP1ailvSxM6ZweXTegylPny803bFhA+vqBYw4s31NSAk4S2Qz+AKXK9a4wkdjcQ==
 
-xmv-sdk@0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/xmv-sdk/-/xmv-sdk-0.0.1.tgz#5cc3c164dbc291890754c61a27ea28b5f1a7c86c"
-  integrity sha512-/vPwxvPVjpvVhh8JEhgApMGlmlz0s5+qZfqkxYtnE2LcM39cc39+seaotXVRUy9fn3YTVz5fjJuDxwkUct8EfQ==
+xmv-sdk@0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/xmv-sdk/-/xmv-sdk-0.0.2.tgz#bc7177558c8b15fa4988e096480b01f008224519"
+  integrity sha512-nIrSaIXDY9E03yFbT+9lJ20c0sTkwA77WuDarDRDQ+fCS4SrWRdW+CMua/epGMCHnygOfHDEgawf9oCOnywkqg==
+  dependencies:
+    flatbuffers "^24.3.25"
 
-xvm-hardhat-provider-plugin@0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/xvm-hardhat-provider-plugin/-/xvm-hardhat-provider-plugin-0.0.1.tgz#8997e4bd65e8bbdbbae57c6ae6429e1bf7c19967"
-  integrity sha512-PXJEE+FwOr9FTO88jMXs97p+dvNDZPFbc1ytTxEPWRCRwOFmACZ880QXenDy8MCVS/96NiW+YiSd+kuq/jufIQ==
+xvm-hardhat-provider-plugin@0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/xvm-hardhat-provider-plugin/-/xvm-hardhat-provider-plugin-0.0.2.tgz#4ca697a28e1393ed899396384a5a7c4b3a5b7b04"
+  integrity sha512-KxKPy7rVC8OsdBKpUrWIGTHBGVaY6luJfG7FhvB2aHn9j+oP/2HtJPdXfOA3zd9lecna6mfNCerKQP21TF/3TQ==
   dependencies:
     "@unisat/wallet-sdk" "^1.7.1"
     ethers "^6.13.2"
     viem "^2.21.0"
-    xmv-sdk "0.0.1"
+    xmv-sdk "0.0.2"
 
 y18n@^5.0.5:
   version "5.0.8"
