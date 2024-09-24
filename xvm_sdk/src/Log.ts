@@ -1,5 +1,5 @@
 class Log {
-  private static isEnabled: boolean = true;
+  private static isEnabled: boolean = false;
 
   static enable(): void {
     this.isEnabled = true;

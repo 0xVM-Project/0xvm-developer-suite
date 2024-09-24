@@ -39,30 +39,60 @@ export async function privateKeysToAccount(
 	const btcWallet = new LocalWallet(pair.toWIF(), AddressType.P2TR, network);
 	const btcAddress = btcWallet.address;
 
+	const needMapping = await checkNeedBinding(xvmClient, btcAddress, xvmAddress);
+
 	const message = `\x19Ethereum Signed Message:\n32${xvmAddress}:${btcAddress}`;
 	const sig = await ethWallet.signMessage(message);
 
-	const bindingStatus = await xvmClient.addressMapping(
-		xvmAddress,
-		btcAddress,
-		sig
-	);
-
-	// bind fail. throw error
-	if (bindingStatus.code !== 0 && bindingStatus.code !== 9004) {
-		throw new Error(
-			`address mapping failed: code = ${bindingStatus.code}, message = ${bindingStatus?.errorMessage}`
+	if (needMapping) {
+		const bindingStatus = await xvmClient.addressMapping(
+			xvmAddress,
+			btcAddress,
+			sig
 		);
+	
+		// bind fail. throw error
+		if (bindingStatus.code !== 0) {
+			throw new Error(
+				`address mapping failed: code = ${bindingStatus.code}, message = ${bindingStatus?.errorMessage}`
+			);
+		}
 	}
 
 	return {
 		xvmAccount: viemPrivateKeyToAccount(ethWallet.privateKey as Hex),
-		xvmAddress: bindingStatus.data.xvmAddress ?? xvmAddress,
-		btcAddress: bindingStatus.data.btcAddress ?? btcAddress,
-		isNewBinding: bindingStatus.code !== 9004,
+		xvmAddress: xvmAddress,
+		btcAddress: btcAddress,
+		isNewBinding: needMapping,
 		btcAccount: btcWallet,
 	};
 }
+
+async function checkNeedBinding(xvmClient: XVMClient, btcAddress: string, xvmAddress: string) {
+	const [btcMapping, xvmMapping] = await Promise.all([
+		xvmClient.getAddressMapping(btcAddress),
+		xvmClient.getAddressMapping(xvmAddress)
+	]);
+
+	if (btcMapping.code === 9001 && xvmMapping.code === 9001 ) {
+		return true;
+	}
+
+	if (btcMapping.code === 0 || xvmMapping.code === 0) {
+		if (btcMapping.code !== xvmMapping.code || 
+			btcMapping.data.btcAddress !== xvmMapping.data.btcAddress || 
+			btcMapping.data.xvmAddress !== xvmMapping.data.xvmAddress
+		) {
+			throw new Error(
+				`address mapping check failed, already has a mapping address`
+			);
+		}
+	}
+
+
+	return false; 
+}
+
 
 export type BtcAccount = LocalWallet;
 

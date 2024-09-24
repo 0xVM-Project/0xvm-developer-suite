@@ -41,7 +41,7 @@ export class XVMClient {
 	private receiverAddress: string;
 
 	constructor(network: NetworkType) {
-    const serviceConfig = network === NetworkType.MAINNET ? ServiceConfig.mainnet : ServiceConfig.test;
+		const serviceConfig = network === NetworkType.MAINNET ? ServiceConfig.mainnet : ServiceConfig.test;
 
 		this.host = serviceConfig.HOST;
 		this.receiverAddress = serviceConfig.RECEIVER_ADDRESS;
@@ -66,24 +66,28 @@ export class XVMClient {
 		return createRequest<CreateRevealData>(body, "inscribe/commit_inscribe", this.host);
 	};
 
-  public addressMapping = (xvmAddress: string, btcAddress: string, sig: string) => {
-    const body = JSON.stringify({
-      xvmAddress: xvmAddress,
-      btcAddress: btcAddress,
-      sig: sig,
-    });
+	public addressMapping = (xvmAddress: string, btcAddress: string, sig: string) => {
+		const body = JSON.stringify({
+			xvmAddress: xvmAddress,
+			btcAddress: btcAddress,
+			sig: sig,
+		});
 
-    return createRequest<AddressMappingData>(body, "address-mapping", this.host);
-  };
+		return createRequest<AddressMappingData>(body, "address-mapping", this.host);
+	};
+
+	public getAddressMapping = (address: string) => {
+		return createRequest<AddressMappingData>(undefined, `address-mapping/${address}`, this.host, "GET");
+	}
 
 }
 
-const createRequest = <T>(body: string, path: string, host: string) => {
+const createRequest = <T>(body: string | undefined, path: string, host: string, method: string = "POST") => {
 	const myHeaders = new Headers();
 	myHeaders.append("Content-Type", "application/json");
 
 	const requestOptions = {
-		method: "POST",
+		method: method,
 		headers: myHeaders,
 		body: body,
 	};
