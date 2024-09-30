@@ -9,9 +9,9 @@ describe("Inscribe module", () => {
 
 	test("Test make inscription", async () => {
 		const btcPrivateKey = "eaf4bf9e90926ebca33591a6935c70837600423005d6b2cfa27a3b8948a70a26";
-		const ethPrivateKey = "421fda3e773553e2dbbf75a09f3e6e76b5a9322678e0c1ecd70ba87a84111092";
+		const xvmPrivateKey = "421fda3e773553e2dbbf75a09f3e6e76b5a9322678e0c1ecd70ba87a84111092";
 
-		const { xvmAccount, btcAccount } = await privateKeysToAccount(ethPrivateKey, btcPrivateKey, NetworkType.TESTNET);
+		const { xvmAccount, btcAccount } = await privateKeysToAccount(xvmPrivateKey, btcPrivateKey, NetworkType.TESTNET);
 
 		expect(btcAccount.address).toEqual("tb1p8hx8l7zme0uzwy8d3d0rdu3efjgaclqcc68pxtm3haju9yugll5skkn69w");
 

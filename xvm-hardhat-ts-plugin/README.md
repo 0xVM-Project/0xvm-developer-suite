@@ -1,58 +1,56 @@
-# Hardhat TypeScript plugin boilerplate
+# xvm-hardhat-provider-plugin
 
-This is a sample Hardhat plugin written in TypeScript. Creating a Hardhat plugin
-can be as easy as extracting a part of your config into a different file and
-publishing it to npm.
+## Highlights
 
-This sample project contains an example on how to do that, but also comes with
-many more features:
+🚀 **Ready to Use**: xvm-hardhat-provider-plugin provides plug-and-play XVM network support for your Hardhat projects.
 
-- A mocha test suite ready to use
-- TravisCI already setup
-- A package.json with scripts and publishing info
-- Examples on how to do different things
+🔄 **Seamless Compatibility**: With this plugin, developers can switch to the XVM network as easily as using other Ethereum networks.
+
+⚡ **Efficient Development**: Greatly simplifies the process of developing, testing, and deploying smart contracts on the XVM network.
+
+🛠 **Easy Configuration**: Enable XVM network support in your project with just a few lines of code.
 
 ## Installation
 
-To start working on your project, just run
+Bring the power of XVM into your project with just one command:
 
 ```bash
-npm install
+// if you use npm
+npm install xvm-hardhat-provider-plugin
+
+// if you use yarn
+yarn install xvm-hardhat-provider-plugin
 ```
 
-## Plugin development
+## Enabling the Plugin
 
-Make sure to read our [Plugin Development Guide](https://hardhat.org/advanced/building-plugins.html) to learn how to build a plugin.
+Add one line to your `hardhat.config.ts` file to activate the plugin:
 
-## Testing
+```typescript:hardhat.config.ts
+import "xvm-hardhat-provider-plugin";
+```
 
-Running `npm run test` will run every test located in the `test/` folder. They
-use [mocha](https://mochajs.org) and [chai](https://www.chaijs.com/),
-but you can customize them.
+## Network Configuration
 
-We recommend creating unit tests for your own modules, and integration tests for
-the interaction of the plugin with Hardhat and its dependencies.
+Add XVM network configuration, which is identical to other network configurations:
 
-## Linting and autoformat
+```typescript:hardhat.config.ts
+const config: HardhatUserConfig = {
+  networks: {
+    xvm: {
+      url: "...",
+      accounts: ['YOUR_PRIVATE_KEY_HERE'],
+    },
+  }
+};
+```
 
-All of Hardhat projects use [prettier](https://prettier.io/) and
-[tslint](https://palantir.github.io/tslint/).
+## Logging Support
 
-You can check if your code style is correct by running `npm run lint`, and fix
-it with `npm run lint:fix`.
+Built-in logging functionality to help you debug easily:
 
-## Building the project
+```typescript:hardhat.config.ts
+import Log from "xmv-sdk/dist/Log";
 
-Just run `npm run build` ️👷
-
-## README file
-
-This README describes this boilerplate project, but won't be very useful to your
-plugin users.
-
-Take a look at `README-TEMPLATE.md` for an example of what a Hardhat plugin's
-README should look like.
-
-## Migrating from Buidler?
-
-Take a look at [the migration guide](MIGRATION.md)!
+Log.enable();
+```

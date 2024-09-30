@@ -21,12 +21,12 @@ export async function privateKeyToAccount(
  * isNewBinding is true if it's the first time binding
  */
 export async function privateKeysToAccount(
-	ethPrivateKey: string,
+	xvmPrivateKey: string,
 	btcPrivateKey: string,
 	network: NetworkType
 ): Promise<UltraAccount> {
-	const ethWallet = new ethers.Wallet(ethPrivateKey);
-	const xvmAddress = ethWallet.address;
+	const xvmWallet = new ethers.Wallet(xvmPrivateKey);
+	const xvmAddress = xvmWallet.address;
 	const xvmClient = new XVMClient(network);
 
 	const pair = ECPair.fromPrivateKey(
@@ -42,7 +42,7 @@ export async function privateKeysToAccount(
 	const needMapping = await checkNeedBinding(xvmClient, btcAddress, xvmAddress);
 
 	const message = `\x19Ethereum Signed Message:\n32${xvmAddress}:${btcAddress}`;
-	const sig = await ethWallet.signMessage(message);
+	const sig = await xvmWallet.signMessage(message);
 
 	if (needMapping) {
 		const bindingStatus = await xvmClient.addressMapping(
@@ -60,7 +60,7 @@ export async function privateKeysToAccount(
 	}
 
 	return {
-		xvmAccount: viemPrivateKeyToAccount(ethWallet.privateKey as Hex),
+		xvmAccount: viemPrivateKeyToAccount(xvmWallet.privateKey as Hex),
 		xvmAddress: xvmAddress,
 		btcAddress: btcAddress,
 		isNewBinding: needMapping,

@@ -24,13 +24,13 @@ describe("Service module", () => {
 	});
 
 	test("illegal addressMapping should failed", async () => {
-		const ethPrivateKey = ECPair.makeRandom().privateKey?.toString("hex") ?? "";
+		const xvmPrivateKey = ECPair.makeRandom().privateKey?.toString("hex") ?? "";
 		const btcPrivateKey = ECPair.makeRandom().privateKey?.toString("hex") ?? "";
 
-		await privateKeyToAccount(ethPrivateKey, NetworkType.TESTNET);
+		await privateKeyToAccount(xvmPrivateKey, NetworkType.TESTNET);
 
 		await expect(
-			privateKeysToAccount(ethPrivateKey, btcPrivateKey, NetworkType.TESTNET)
+			privateKeysToAccount(xvmPrivateKey, btcPrivateKey, NetworkType.TESTNET)
 		).rejects.toThrowError();
 		
 		// expect(result.isNewBinding).toBe(false);

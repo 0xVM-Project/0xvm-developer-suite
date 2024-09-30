@@ -5,14 +5,20 @@ Welcome to the **XVM Developer Tool Suite**! This suite provides essential tools
 ## Components
 
 ### 1. xvm-sdk
+
 The `xvm-sdk` is a powerful tool that allows you to directly deploy contracts and send transactions via RPC. Whether you're building decentralized applications or interacting with smart contracts, `xvm-sdk` provides the necessary functionalities to make your development process more efficient.
 
 ### 2. Plugin for Hardhat
+
 This plugin is designed to work in conjunction with Hardhat, one of the most widely used development environments for Ethereum. By integrating the plugin with Hardhat, you can leverage the full power of the XVM ecosystem directly within your existing workflows.
 
 ## Getting Started
 
-Detailed documentation and examples are provided to help you quickly integrate these tools into your development environment.
+Detailed documentation and examples are provided to help you quickly integrate these tools into your development environment:
+
+- [XVM SDK](./xvm_sdk/README.md)
+
+- [Plugin for Hardhat](./xvm-hardhat-ts-plugin/README.md)
 
 ## Contributions
 
