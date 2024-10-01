@@ -1,6 +1,6 @@
 {
   "name": "xmv-sdk",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "homepage": "https://github.com/0xVM-Project/0xvm-developer-suite",

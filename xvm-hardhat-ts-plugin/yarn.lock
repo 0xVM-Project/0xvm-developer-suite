@@ -3195,10 +3195,10 @@ ws@^7.4.6:
   resolved "https://registry.npmjs.org/ws/-/ws-7.5.4.tgz"
   integrity sha512-zP9z6GXm6zC27YtspwH99T3qTG7bBFv2VIkeHstMLrLlDJuzA7tQ5ls3OJ1hOGGCzTQPniNJoHXIAOS0Jljohg==
 
-xmv-sdk@0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/xmv-sdk/-/xmv-sdk-0.0.4.tgz#19e373cafbb9ce7f1bab6ff83714164002296589"
-  integrity sha512-Nb5JN33prnI0O/Vi6dViGleC0Xlarx/q0gw+Yo/Gkjwx37s4XDKkyCfLQKLzjW7Lz1KUPDg3vYcigL8LcLQ0ww==
+xmv-sdk@0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/xmv-sdk/-/xmv-sdk-0.0.5.tgz#68e0a36e9338c0b82c130b512ad54cf205b2f2e1"
+  integrity sha512-8s9Q6jnHRiZ9UWUs5yzV2GbJ7bwYbJk2ebYWbbu+ZdWPCBypjM2e17kybFHsM5CrKrpPDa5rn37cKj3gbeiTEw==
   dependencies:
     flatbuffers "^24.3.25"
 

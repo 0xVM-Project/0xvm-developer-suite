@@ -4402,22 +4402,22 @@ ws@^7.4.6:
   resolved "https://registry.yarnpkg.com/ws/-/ws-7.5.10.tgz#58b5c20dc281633f6c19113f39b349bd8bd558d9"
   integrity sha512-+dbF1tHwZpXcbOJdVOkzLDxZP1ailvSxM6ZweXTegylPny803bFhA+vqBYw4s31NSAk4S2Qz+AKXK9a4wkdjcQ==
 
-xmv-sdk@0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/xmv-sdk/-/xmv-sdk-0.0.4.tgz#19e373cafbb9ce7f1bab6ff83714164002296589"
-  integrity sha512-Nb5JN33prnI0O/Vi6dViGleC0Xlarx/q0gw+Yo/Gkjwx37s4XDKkyCfLQKLzjW7Lz1KUPDg3vYcigL8LcLQ0ww==
+xmv-sdk@0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/xmv-sdk/-/xmv-sdk-0.0.5.tgz#68e0a36e9338c0b82c130b512ad54cf205b2f2e1"
+  integrity sha512-8s9Q6jnHRiZ9UWUs5yzV2GbJ7bwYbJk2ebYWbbu+ZdWPCBypjM2e17kybFHsM5CrKrpPDa5rn37cKj3gbeiTEw==
   dependencies:
     flatbuffers "^24.3.25"
 
-xvm-hardhat-provider-plugin@0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/xvm-hardhat-provider-plugin/-/xvm-hardhat-provider-plugin-0.0.4.tgz#c391d8f3b002e9bb25131e584e12131242bd96ce"
-  integrity sha512-XBOXWWc/ohZXNq8/zxLI8znTBt20kHkBVBHR4HIIDivJpeHfRvLyUqmg2ilvqLg3WZ3gg2hNG8gKPoHhSybPmw==
+xvm-hardhat-provider-plugin@0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/xvm-hardhat-provider-plugin/-/xvm-hardhat-provider-plugin-0.0.5.tgz#d2005be83dcb1a7ddd118c512f77971b43ea3a65"
+  integrity sha512-dVz1/lsfa992ebgp7p7c3pMK+b8KbdO8hTT3vvGHgYsCFu/2JjoXhNHblbZXu7eX1MzON1hYD0ekwLrGSKJP/Q==
   dependencies:
     "@unisat/wallet-sdk" "^1.7.1"
     ethers "^6.13.2"
     viem "^2.21.0"
-    xmv-sdk "0.0.4"
+    xmv-sdk "0.0.5"
 
 y18n@^5.0.5:
   version "5.0.8"
