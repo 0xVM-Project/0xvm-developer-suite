@@ -16,6 +16,10 @@ npm install xvm-sdk @unisat/wallet-sdk ethers viem
 yarn add xvm-sdk @unisat/wallet-sdk ethers viem
 ```
 
+**Please note that** for optimal compatibility, it is recommended to use version 2.x of `viem` and version 6.x of `ethers`.
+
+
+
 ## XVM Account
 
 The `XVM Account` is compatible with Ethereum address formats and allows you to create accounts that interact with both the BTC and ETH networks using an Ethereum private key. The `privateKeysToAccount` method generates XVM accounts.
@@ -96,3 +100,6 @@ const result = await client.sendRawTransaction({
 ```
 
 After the transaction is successfully sent, you can view the transaction on the XVM explorer once the BTC network confirms the block.
+
+## License
+[MIT](LICENSE)

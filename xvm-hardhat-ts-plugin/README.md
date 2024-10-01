@@ -54,3 +54,6 @@ import Log from "xmv-sdk/dist/Log";
 
 Log.enable();
 ```
+
+## License
+[MIT](LICENSE)

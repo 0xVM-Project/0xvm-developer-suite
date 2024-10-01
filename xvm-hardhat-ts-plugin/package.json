@@ -6,6 +6,8 @@
   "license": "MIT",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
+  "homepage": "https://github.com/0xVM-Project/0xvm-developer-suite",
+  "repository": "github:0xVM-Project/0xvm-developer-suite",
   "keywords": [
     "ethereum",
     "smart-contracts",

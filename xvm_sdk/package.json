@@ -3,6 +3,8 @@
   "version": "0.0.4",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "homepage": "https://github.com/0xVM-Project/0xvm-developer-suite",
+  "repository": "github:0xVM-Project/0xvm-developer-suite",
   "files": [
     "dist",
     "src",
@@ -13,9 +15,14 @@
     "start": "ts-node src/index.ts",
     "test": "jest"
   },
-  "keywords": [],
+  "keywords": [
+    "XVM",
+    "BTC",
+    "ether",
+    "viem"
+  ],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "description": "",
   "devDependencies": {
     "@babel/core": "^7.25.2",
